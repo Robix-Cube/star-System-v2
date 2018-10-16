@@ -1,13 +1,13 @@
 public class Planet
 {
 	double distance,diameter,angle,speed;
-	String colour;
-	Planet(double dist,double ang,String col,double spee)
+	String pColour;
+	Planet(double dist,double ang,double size,String col,double spee)
 	{
 		distance=dist;
 		angle=ang;
-		diameter=35;
-		colour=col;
+		diameter=size;
+		pColour=col;
 		speed=spee;
 	}
 	public double getDist()
@@ -28,11 +28,11 @@ public class Planet
 	}
 	public String getCol()
 	{
-		return colour;
+		return pColour;
 	}
 	public void movePlanet(SolarSystem s)
 	{
-		s.drawSolarObject(this.distance,this.angle,this.diameter,this.colour);
+		s.drawSolarObject(this.distance,this.angle,this.diameter,this.pColour);
 		this.angle+=speed;
 	}
 }
